@@ -1,0 +1,45 @@
+<!--
+  Generated template for the Newpage1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ALGORITHM</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<p>Firefly algorithm
+
+The firefly algorithm (FA) is a nature-inspired optimization method [7], which maintains a population of fireflies to find the global optimum of an optimization problem.
+
+In FA, the distance between any two fireflies  and  at  and , respectively, can be defined as the Euclidean distance , which is formulated as follows,</p>
+
+<p>(1)
+where  is the dimension of an optimization problem.
+
+Indeed, the larger the distance  is, the less light the fireflies can see from each other. Accordingly, it is necessary to define monotonically decreasing functions for light intensity and attractiveness, respectively. They are presented in Eqs. (2) and (3).
+</p>
+<p>(2)
+where  is initial light intensity, and  is the light absorption coefficient, which controls the decrease of light intensity. Accordingly, the attractiveness  of a firefly is defined as shown in Eq. (3).
+</p>
+<p>(3)
+where  is a constant, which is the attractiveness at .
+
+The step of a firefly  is attracted to move to another more attractive (brighter) firefly  is determined by
+</p>
+<p>(4)
+where  is a constant vector  and  is the time step,  is drawn from a normal distribution .  is the step size of the th firefly moving. The first term is the attraction from the th firefly, while the second term is randomization controlled by , which is a constant in the range of . Therefore, the update of the th firefly is formulated as follows,</p>
+<p>
+(5)
+
+The Eqs. (4) and (5) show that the th firefly will move towards the th firefly, which is a more attractive one.</p>
+<p><button ion-button (click)="onButtonClicked()">
+   BACK
+  </button></p>
+</ion-content>
